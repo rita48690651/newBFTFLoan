@@ -1,0 +1,51 @@
+﻿
+@model IEnumerable<newBFTFLoan.Models.ViewModels.LoanTrialVM>
+
+@{ ViewBag.Title = "DisplayResult"; }
+
+<h2>貸款試算結果</h2>
+
+<div>
+    @Html.ActionLink("返回至貸款試算", "Create")
+</div>
+
+<table class="table table-bordered text-center">
+    <tr>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.CurrentNumOfPeriods)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.CurrentPayable)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.CurrentInterestPayable)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.CurrentPrincipalPayable)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.RemainPrincipal)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.CurrentNumOfPeriods)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CurrentPayable)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CurrentInterestPayable)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CurrentPrincipalPayable)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.RemainPrincipal)
+    </td>
+</tr>}
+
+</table>
