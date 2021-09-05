@@ -35,30 +35,30 @@ namespace newBFTFLoan.Controllers
             return View();
         }
 
-        public ActionResult Create()//填寫申貸表
-        {
-            return View();
-        }
+        //public ActionResult Create()//填寫申貸表
+        //{
+        //    return View();
+        //}
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,BorrowerId,Principal,InterestRate,NumOfPeriods,Reason,CreationTime")] Loan loan)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Loans.Add(loan);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Create([Bind(Include = "Id,BorrowerId,Principal,InterestRate,NumOfPeriods,Reason,CreationTime")] Loan loan)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        db.Loans.Add(loan);
+        //        db.SaveChanges();
+        //        return RedirectToAction("Index");
+        //    }
 
-            return View(loan);
-        }
+        //    return View(loan);
+        //}
 
-        [HttpGet]//上傳身分證、學生證照(身分驗證)
-        public ActionResult Add()
-        {
-            return View();
-        }
+        //[HttpGet]//上傳身分證、學生證照(身分驗證)
+        //public ActionResult Add()
+        //{
+        //    return View();
+        //}
 
 
         //[HttpPost]

@@ -170,6 +170,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="images\ApplyMain1.jpg" />
     <Content Include="images\ApplyMain2.jpg" />
+    <Content Include="images\Home.jpg" />
     <Content Include="images\InvestMain1.jpg" />
     <Content Include="images\InvestMain2.jpg" />
     <Content Include="Scripts\bootstrap.js" />
